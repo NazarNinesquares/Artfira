@@ -5,7 +5,7 @@ $('.header__burger').on('click', function () {
 	$('.footer').toggleClass('active');
 })
 
-$('.page-item a').on('click', function () {
+$('.page_item a').on('click', function () {
 	if($('.main-navigation').hasClass('active')) {
 		$('.main-navigation').removeClass('active');
 		$('body').removeClass('lock');

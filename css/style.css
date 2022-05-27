@@ -165,6 +165,10 @@ body.lock {
   letter-spacing: 1.4px;
 }
 
+.main-navigation .page_item {
+  text-transform: uppercase;
+}
+
 .main-navigation a {
   position: relative;
 }
