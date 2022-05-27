@@ -138,6 +138,7 @@ body.lock {
 .header__logo-box {
   display: inline-block;
   width: 58px;
+  height: 58px;
   margin-bottom: 30px;
 }
 
@@ -475,6 +476,11 @@ body.lock {
     margin: 0;
     position: relative;
     z-index: 10;
+  }
+
+  .header__logo-box.scroll {
+    width: 35px;
+    height: 35px;
   }
 
   .main-navigation {

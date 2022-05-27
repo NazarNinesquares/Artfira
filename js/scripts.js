@@ -18,8 +18,10 @@ $(document).scroll(function() {
 	var scrollTop = $(window).scrollTop();
 	if (scrollTop > 0 ) {
 		$('.header').addClass("scroll");
+		$('.header__logo-box').addClass("scroll");
 	}
 	else{
 		$('.header').removeClass("scroll");
+		$('.header__logo-box').removeClass("scroll");
 	}
 })
