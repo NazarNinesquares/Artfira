@@ -294,21 +294,55 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
   background: url(../img/404/01.png) center/cover no-repeat;
+  color: #fff;
+  padding: 200px 15px 0;
+  text-align: center;
 }
 
 .not-found__title {
   font-family: Raleway;
   font-weight: 600;
   font-size: 128px;
-  color: #fff;
+  margin-bottom: 20px;
+}
+
+.not-found__text {
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+
+.not-found__btn {
+  font-family: Raleway;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 30px;
+}
+
+.not-found__btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 17px;
+  height: 8px;
+  background: url(../img/404/02.svg) center/cover no-repeat;
+  -webkit-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+
+.not-found__btn:hover::before {
+  left: 5px;
 }
 
 @media (max-width: 1440px) {
@@ -476,6 +510,9 @@ body.lock {
     margin: 0;
     position: relative;
     z-index: 10;
+    -webkit-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    transition: all linear 0.2s;
   }
 
   .header__logo-box.scroll {
