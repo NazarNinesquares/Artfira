@@ -129,6 +129,22 @@ body.lock {
   line-height: 184%;
 }
 
+.bread-crumbs {
+  padding: 100px 0 35px;
+  font-family: Raleway;
+  font-weight: 500;
+  line-height: 2.28;
+}
+
+.bread-crumbs .separator {
+  pointer-events: none;
+}
+
+.bread-crumbs .current-item {
+  font-weight: 700;
+  pointer-events: none;
+}
+
 .header {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -246,12 +262,6 @@ body.lock {
 
 .mb-footer__link {
   font-weight: normal;
-}
-
-.bread-crumbs {
-  padding: 100px 0 35px;
-  font-family: Raleway;
-  font-weight: 500;
 }
 
 .presents {
@@ -428,6 +438,52 @@ body.lock {
   line-height: 1.81;
 }
 
+#wrapper.artists-page {
+  min-height: 100%;
+}
+
+.artists-main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.artists {
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.artists__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 auto 70px auto;
+}
+
+.artists__item {
+  width: 50%;
+  padding: 10px;
+}
+
+.artists__link {
+  -webkit-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  display: inline-block;
+}
+
+.artists__link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media (max-width: 1440px) {
   #wrapper {
     max-width: 1125px;
@@ -465,10 +521,6 @@ body.lock {
 
   .footer__link {
     display: block;
-  }
-
-  .bread-crumbs {
-    margin: 50px 0 20px;
   }
 
   .presents p:not(:last-child) {
@@ -696,6 +748,20 @@ body.lock {
 
   .presents__work {
     height: 300px;
+  }
+
+  .artists__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .artists__item {
+    width: 100%;
   }
 }
 

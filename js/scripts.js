@@ -25,3 +25,30 @@ $(document).scroll(function() {
 		$('.header__logo-box').removeClass("scroll");
 	}
 })
+
+let max_width = 0
+
+$('.artists__link').each(function() {
+
+	let this_width = $(this).width()
+
+	if (this_width > max_width) {
+		max_width = this_width
+	}
+})
+
+if ($(window).width() <= 768) {
+
+	$('.artists__list').css("max-width", max_width + 20);
+}
+
+$(window).on('resize', function() {
+
+	if ($(window).width() <= 768) {
+
+		$('.artists__list').css("max-width", max_width + 20);
+	} else {
+
+		$('.artists__list').css("max-width", "none");
+	}
+})
