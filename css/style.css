@@ -10,8 +10,7 @@
   -webkit-box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100%;
 }
 
@@ -353,6 +352,7 @@ body.lock {
 #wrapper.preview-container {
   max-width: none;
   display: block;
+  height: 100%;
 }
 
 .preview-main {
@@ -699,19 +699,7 @@ body.lock {
   }
 }
 
-@media (max-width: 600px) {
-  .bread-crumbs {
-    padding: 90px 0 20px;
-  }
-
-  .presents {
-    padding: 90px 0 60px;
-  }
-
-  .presents__work {
-    height: 220px;
-  }
-
+@media (max-width: 700px) {
   .preview__img-box {
     width: 150px;
     height: 150px;
@@ -724,5 +712,19 @@ body.lock {
 
   .preview__text {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bread-crumbs {
+    padding: 90px 0 20px;
+  }
+
+  .presents {
+    padding: 90px 0 60px;
+  }
+
+  .presents__work {
+    height: 220px;
   }
 }
