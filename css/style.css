@@ -129,20 +129,49 @@ body.lock {
   line-height: 184%;
 }
 
-.bread-crumbs {
-  padding: 100px 0 35px;
+.secondary-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: Raleway;
   font-weight: 500;
   line-height: 2.28;
+  padding: 100px 0 35px;
 }
 
-.bread-crumbs .separator {
+.secondary-nav .bread-crumbs {
+  white-space: nowrap;
+}
+
+.secondary-nav .bread-crumbs .separator {
   pointer-events: none;
 }
 
-.bread-crumbs .current-item {
+.secondary-nav .bread-crumbs .current-item {
   font-weight: 700;
   pointer-events: none;
+}
+
+.secondary-nav .tab-toggle {
+  text-align: end;
+  padding-left: 10px;
+}
+
+.secondary-nav .tab-toggle__btn {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 15px;
+}
+
+.secondary-nav .tab-toggle__btn.active {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .header {
@@ -484,6 +513,114 @@ body.lock {
           transform: scale(1.1);
 }
 
+.biography {
+  padding-bottom: 50px;
+  display: none;
+}
+
+.biography.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.biography__img-box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 350px;
+          flex: 0 0 350px;
+  padding-right: 32px;
+}
+
+.biography__img {
+  width: 100%;
+}
+
+.biography__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.content-biography__title {
+  display: block;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 2.25;
+  letter-spacing: 1px;
+}
+
+.content-biography__info {
+  display: block;
+  font-style: italic;
+  line-height: 2.21;
+  margin-bottom: 20px;
+}
+
+.content-biography p {
+  max-width: 430px;
+  font-style: italic;
+  line-height: 2.21;
+}
+
+.works {
+  display: none;
+  padding-bottom: 50px;
+}
+
+.works.active {
+  display: block;
+}
+
+.works__item-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 850px;
+}
+
+.works__item-box:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.works__img-box {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 475px;
+          flex: 0 0 475px;
+  height: 365px;
+  padding-right: 35px;
+}
+
+.works__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.works__text-box {
+  padding-right: 10px;
+}
+
+.works__title {
+  display: block;
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.75;
+  margin-bottom: 5px;
+}
+
+.works__info span {
+  display: block;
+  line-height: 1.71;
+}
+
+.works__info span:first-child {
+  font-weight: 700;
+}
+
 @media (max-width: 1440px) {
   #wrapper {
     max-width: 1125px;
@@ -495,6 +632,35 @@ body.lock {
 
   .presents__work {
     height: 336px;
+  }
+
+  .works__item-box {
+    max-width: 745px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .secondary-nav .tab-toggle__btn {
+    letter-spacing: 1px;
+    margin: 0 11px;
+  }
+
+  .biography {
+    padding-bottom: 20px;
+  }
+
+  .biography__img-box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 200px;
+            flex: 0 0 200px;
+  }
+
+  .works__img-box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 350px;
+            flex: 0 0 350px;
+    height: 250px;
+    padding-right: 15px;
   }
 }
 
@@ -532,9 +698,40 @@ body.lock {
   }
 }
 
+@media (max-width: 900px) {
+  .works__img-box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+    height: 200px;
+    padding-right: 15px;
+  }
+
+  .works__title {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  .secondary-nav {
+    font-size: 12px;
+  }
+
+  .secondary-nav .tab-toggle__btn {
+    margin: 0 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .navigation {
     height: auto;
+  }
+
+  .secondary-nav {
+    margin: 0;
+    padding: 115px 0 20px;
   }
 
   .header__burger {
@@ -736,11 +933,6 @@ body.lock {
     padding-left: 15px;
   }
 
-  .bread-crumbs {
-    margin: 0;
-    padding: 115px 0 20px;
-  }
-
   .presents {
     padding: 115px 0 30px;
     text-align: center;
@@ -758,10 +950,49 @@ body.lock {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
 
   .artists__item {
     width: 100%;
+  }
+
+  .biography.active,
+  .works.active {
+    display: block;
+  }
+
+  .biography__img-box {
+    max-width: 300px;
+    height: 360px;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+
+  .biography__img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .biography__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .content-biography {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+
+  .content-biography__title {
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+
+  .content-biography p {
+    max-width: none;
   }
 }
 
@@ -782,8 +1013,32 @@ body.lock {
 }
 
 @media (max-width: 600px) {
-  .bread-crumbs {
+  .secondary-nav {
+    display: block;
     padding: 90px 0 20px;
+  }
+
+  .secondary-nav .tab-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .secondary-nav .tab-toggle__btn {
+    margin-left: 0;
+  }
+
+  .secondary-nav .tab-toggle__btn:first-child {
+    margin-bottom: 8px;
   }
 
   .presents {
@@ -792,5 +1047,48 @@ body.lock {
 
   .presents__work {
     height: 220px;
+  }
+
+  .works__item-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: none;
+    text-align: center;
+  }
+
+  .works__img-box {
+    padding-right: 0;
+    height: 285px;
+  }
+
+  .works__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .works__text-box {
+    padding-right: 0;
+  }
+
+  .works__title {
+    display: block;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.75;
+    margin-bottom: 5px;
+  }
+
+  .works__info span {
+    display: block;
+    line-height: 1.71;
+  }
+
+  .works__info span:first-child {
+    font-weight: 700;
   }
 }

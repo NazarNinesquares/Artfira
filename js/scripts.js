@@ -26,29 +26,38 @@ $(document).scroll(function() {
 	}
 })
 
-let max_width = 0
+// let max_width = 0
 
-$('.artists__link').each(function() {
+// $('.artists__link').each(function() {
 
-	let this_width = $(this).width()
+// 	let this_width = $(this).width()
 
-	if (this_width > max_width) {
-		max_width = this_width
-	}
-})
+// 	if (this_width > max_width) {
+// 		max_width = this_width
+// 	}
+// })
 
-if ($(window).width() <= 768) {
+// if ($(window).width() <= 768) {
 
-	$('.artists__list').css("max-width", max_width + 20);
-}
+// 	$('.artists__list').css("max-width", max_width + 20);
+// }
 
-$(window).on('resize', function() {
+// $(window).on('resize', function() {
 
-	if ($(window).width() <= 768) {
+// 	if ($(window).width() <= 768) {
 
-		$('.artists__list').css("max-width", max_width + 20);
-	} else {
+// 		$('.artists__list').css("max-width", max_width + 20);
+// 	} else {
 
-		$('.artists__list').css("max-width", "none");
-	}
+// 		$('.artists__list').css("max-width", "none");
+// 	}
+// })
+
+$('.tab-toggle__btn').on('click', function () {
+	
+	$('.tab-toggle__btn').removeClass('active');
+	$(this).addClass('active');
+
+	$('.tab-page').removeClass('active');
+	$('.tab-page' + '.' + $(this).data("tab")).addClass('active');
 })
