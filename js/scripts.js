@@ -61,3 +61,28 @@ $('.tab-toggle__btn').on('click', function () {
 	$('.tab-page').removeClass('active');
 	$('.tab-page' + '.' + $(this).data("tab")).addClass('active');
 })
+
+
+
+// let tab_class
+// let tab_data
+
+// $('.works__info span:first-child').on('click', function () {
+
+// 	$('.artists-page .tab-toggle__btn').each(function() {
+
+// 		if($(this).hasClass('active')) {
+// 			tab_class = $(this).attr('class')
+// 			tab_data = $(this).data('tab')
+// 		}
+// 	})
+
+// 	console.log(tab_class, tab_data);
+// 	sessionStorage.setItem('class', tab_class);
+// })
+
+
+// $('.current-item').on('click', function () {
+	
+// 	console.log(sessionStorage.getItem('class'));
+// })
