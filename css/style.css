@@ -691,6 +691,37 @@ body.lock {
   position: relative;
 }
 
+.exhibitions-item {
+  margin-bottom: 50px;
+}
+
+.exhibitions-item__text-box {
+  font-family: Raleway;
+}
+
+.exhibitions-item__text-box p {
+  margin-bottom: 30px;
+  line-height: 1.71;
+}
+
+.members-exhibitions-item {
+  font-weight: 700;
+  line-height: 1.71;
+}
+
+.members-exhibitions-item__title {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.members-exhibitions-item__group {
+  margin-bottom: 30px;
+}
+
+.members-exhibitions-item__group span {
+  display: block;
+}
+
 @media (max-width: 1440px) {
   #wrapper {
     max-width: 1125px;
