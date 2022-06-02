@@ -1,18 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@@include('_head.html',{
-	"title":"ArtFira Gallery | Exhibitions"
-})
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/home/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/home/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>ArtFira Gallery | Exhibitions</title>
+</head>
 
 <body id="wrapper" class="artists-page">
 
 	<div class="navigation">
-		@@include('_header.html',{
-			"href":"index.html"
-		})
+		<header class="header">
+	<div class='header__container _cont'>
+		<a class="header__logo-box" href="index.html">
+			<img class='header__logo' src='img/home/logo.png' alt=''>
+		</a>
+		<nav class="main-navigation">
+			<div class="menu">
+				<ul>
+					<li class="page_item">
+						<a href="artists-page.html">Artists</a>
+					</li>
+					<li class="page_item">
+						<a href="exhibitions.html">Exhibitions</a>
+					</li>
+					<li class="page_item">
+						<a href="video.html">Video</a>
+					</li>
+					<li class="page_item">
+						<a href="shop.html">Shop</a>
+					</li>
+					<li class="page_item">
+						<a href="blog.html">Blog</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="header__burger">
+			<span></span>
+		</div>
+	</div>
+</header>
 	
-		@@include('_footer.html')
+		<footer class="footer">
+	<div class='footer__container _cont'>
+		<p class="footer__contact">
+			Phone: <a class="footer__link" href="tel:9175735688">917 573 5688</a>
+		</p>
+		<p class="footer__contact">
+			Email: <a class="footer__link" href="mailto:mail@artfira.com">mail@artfira.com</a>
+		</p>
+		<p class="footer__contact">
+			Mailing address: <span class="footer__link">P.O.Box 792, Hunter, NY 12442</span>
+		</p>
+	</div>
+</footer>
 	</div>
 
 	<main class="main artists-main">
@@ -80,7 +126,19 @@
 		</div>
 	</main>
 
-	@@include('_mb-footer.html')
+	<footer class="mb-footer">
+	<div class='mb-footer__container _cont'>
+		<p class="mb-footer__contact">
+			Phone: <a class="mb-footer__link" href="tel:9175735688">917 573 5688</a>
+		</p>
+		<p class="mb-footer__contact">
+			Email: <a class="mb-footer__link" href="mailto:mail@artfira.com">mail@artfira.com</a>
+		</p>
+		<p class="mb-footer__contact">
+			Mailing address: <span class="mb-footer__link">P.O.Box 792, Hunter, NY 12442</span>
+		</p>
+	</div>
+</footer>
 
 	<script src="service/jquery.js"></script>
 	<script src="js/scripts.min.js"></script>
