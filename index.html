@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/home/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/home/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="service/swiper.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>ArtFira Gallery</title>
 </head>
@@ -75,7 +76,42 @@
 						ArtFira Gallery LLC has been founded in 2003. Formerly located at 40 W 23rd Street in New York, we have been operating online and by appointment only over the last 10 years. We have also focused our efforts on researching, collecting and preserving the legacy of a number of immigrant artists of Ukrainian and Russian descend who worked and lived in Venezuela, France, Germany and the USA, among other places.
 					</p>
 				</div>
-				<div class="presents__works-box">
+
+				<!-- Slider main container -->
+				<div class="main-slider swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<img src='img/home/01.png' alt=''>
+						</div>
+						<div class="swiper-slide">
+							<img src='img/home/02.png' alt=''>
+						</div>
+						<div class="swiper-slide">
+							<img src='img/home/03.png' alt=''>
+						</div>
+						<div class="swiper-slide">
+							<img src='img/home/04.png' alt=''>
+						</div>
+					</div>
+					<!-- If we need pagination -->
+				
+					<!-- If we need navigation buttons -->
+					<!-- <div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div> -->
+				</div>
+				<div class="slider-nav">
+					<div class="slider-nav__prev-btn">
+						<img class='slider-nav__arrow' src='img/home/05.svg' alt=''>
+					</div>
+					<div class="slider-nav__pagination"></div>
+					<div class="slider-nav__next-btn">
+						<img class='slider-nav__arrow' src='img/home/05.svg' alt=''>
+					</div>
+				</div>
+
+				<!-- <div class="presents__works-box">
 					<div class='presents__work'>
 						<img src='img/home/01.png' alt=''>
 					</div>
@@ -88,7 +124,7 @@
 					<div class='presents__work'>
 						<img src='img/home/04.png' alt=''>
 					</div>
-				</div>
+				</div> -->
 			</section>
 		</div>
 	</main>
@@ -108,6 +144,7 @@
 </footer>
 
 	<script src="service/jquery.js"></script>
+	<script src="service/swiper.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 </body>
 

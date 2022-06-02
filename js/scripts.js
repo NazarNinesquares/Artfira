@@ -26,6 +26,26 @@ $(document).scroll(function() {
 	}
 })
 
+const swiper = new Swiper('.main-slider', {
+	// Optional parameters
+	loop: true,
+ 
+	// If we need pagination
+	pagination: {
+		el: '.slider-nav__pagination',
+		clickable: true,
+		renderBullet: function (index, className) {
+			return'<span class="' + className + '">' + (index + 1) + '</span>';
+		}
+	},
+ 
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.slider-nav__next-btn',
+	  prevEl: '.slider-nav__prev-btn',
+	},
+ });
+
 // let max_width = 0
 
 // $('.artists__link').each(function() {
