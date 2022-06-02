@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+html/*,body*/ {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+
+input {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: normal;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+// #wrapper {
+// 	display: flex;
+// 	flex-direction: column;
+// 	width: 100%;
+// 	min-height: 100%;
+// 	overflow: hidden;
+
+// 	.main {
+// 		flex: 1 1 auto;
+// 	}
+// }

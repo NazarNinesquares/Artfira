@@ -1,0 +1,205 @@
+.header {
+	flex: 1 1 auto;
+
+	&__container {
+		padding: 0;
+	}
+
+	&__logo-box {
+		display: inline-block;
+		width: 58px;
+		height: 58px;
+		margin-bottom: 30px;
+	}
+
+	&__logo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__burger {
+		display: none;
+		width: 20px;
+	
+		@media (max-width: 768px) {
+	
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 36px;
+			height: 18px;
+			z-index: 10;
+			transition: all linear 0.2s;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				background-color: #000;
+				transition: all linear 0.2s;
+			}
+	
+			&::before {
+				top: 0;
+			}
+	
+			&::after {
+				bottom: 0;
+			}
+	
+			&.active {
+				height: 32px;
+	
+				& span {
+					transform: scale(0);
+				}
+	
+				&::before {
+					top: 42%;
+					transform: rotate(45deg);
+				}
+	
+				&::after {
+					bottom: 50%;
+					transform: rotate(-45deg) ;
+				}
+			}
+		}
+	
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.main-navigation {
+	font-family: Raleway;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 226.9%;
+	letter-spacing: 1.4px;
+
+	.page_item {
+		text-transform: uppercase;
+	}
+
+	& a {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background: #151414;
+			transition: width linear 0.3s;
+		}
+
+		&:hover {
+
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+
+	.header {
+		height: 645px;
+	}
+}
+
+
+@media (max-width: 768px) {
+
+	.header {
+		height: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		z-index: 100;
+
+		&.scroll {
+			box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.5);
+		}
+
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 15px;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #fff;
+				z-index: 10;
+			}
+		}
+
+		&__logo-box {
+			margin: 0;
+			position: relative;
+			z-index: 10;
+			transition: all linear 0.2s;
+
+			&.scroll {
+				width: 35px;
+				height: 35px;
+			}
+		}
+	}
+
+	.main-navigation {
+		position: absolute;
+		top: -100vh;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: #fff;
+		overflow: auto;
+		transition: top linear 0.2s;
+
+		&.active {
+			top: 0;
+		}
+		
+		& .menu {
+			display: flex;
+			flex-direction: column;
+			padding: 100px 15px 200px;
+		}
+
+		& a {
+	
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+
+	.header {
+
+		&__logo-box {
+			// width: 35px;
+		}
+	}
+}

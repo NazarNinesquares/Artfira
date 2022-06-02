@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('_head.html',{
+	"title":"ArtFira Gallery | Exhibitions"
+})
+
+<body id="wrapper" class="artists-page">
+
+	<div class="navigation">
+		@@include('_header.html',{
+			"href":"index.html"
+		})
+	
+		@@include('_footer.html')
+	</div>
+
+	<main class="main artists-main">
+		<div class="main__container _cont">
+			<div class="secondary-nav">
+				<div class="bread-crumbs">
+					<span>
+						<a class="home" href="index.html"><span>Home</span></a>
+					</span>
+					<span class="separator"> / </span>
+					<span>
+						<span class="current-item">Video</span>
+					</span>
+				</div>
+			</div>
+			<div class="video">
+				<div class="video__box box-video">
+					<div class="box-video__left">
+						<video class="box-video__video" src="img/video/test-video.mp4" preload="none" poster="img/video/01.png" controls></video>
+					</div>
+					<div class="box-video__right">
+						<span class="box-video__title">Anton S. Kandinsky</span>
+						<span class="box-video__subtitle">– New York 2003-2013 Part I</span>
+					</div>
+				</div>
+				<div class="video__box box-video">
+					<div class="box-video__left">
+						<video class="box-video__video" src="img/video/test-video.mp4" preload="none" poster="img/video/01.png" controls></video>
+					</div>
+					<div class="box-video__right">
+						<span class="box-video__title">Volodymyr Makarenko</span>
+						<span class="box-video__subtitle">– ride from Belgravia to St. Pancras train station in a taxi</span>
+					</div>
+				</div>
+				<div class="video__box box-video">
+					<div class="box-video__left">
+						<video class="box-video__video" src="img/video/test-video.mp4" preload="none" poster="img/video/01.png" controls></video>
+					</div>
+					<div class="box-video__right">
+						<span class="box-video__title">Alex Melamid and Anton S. Kandinsky.</span>
+						<span class="box-video__subtitle">– “Box of Happiness.”</span>
+					</div>
+				</div>
+				<div class="video__box box-video">
+					<div class="box-video__left">
+						<video class="box-video__video" src="img/video/test-video.mp4" preload="none" poster="img/video/01.png" controls></video>
+					</div>
+					<div class="box-video__right">
+						<span class="box-video__title">Greeting of Kateryna Krychevsky to Poltava Museum.</span>
+						<span class="box-video__subtitle">–  May 2013, Mountain View, California. Recorded by Alex Demko.</span>
+					</div>
+				</div>
+				<div class="video__box box-video">
+					<div class="box-video__left">
+						<video class="box-video__video" src="img/video/test-video.mp4" preload="none" poster="img/video/01.png" controls></video>
+					</div>
+					<div class="box-video__right">
+						<span class="box-video__title">Greeting of Kateryna Krychevsky to Poltava Museum.</span>
+						<span class="box-video__subtitle">–  May 2013, Mountain View, California. Recorded by Alex Demko.</span>
+					</div>
+				</div>
+			</div>
+		<div>
+		</div>
+		</div>
+	</main>
+
+	@@include('_mb-footer.html')
+
+	<script src="service/jquery.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+
+</html>
