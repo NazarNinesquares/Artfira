@@ -293,6 +293,10 @@ body.lock {
   font-weight: normal;
 }
 
+#wrapper.home-page {
+  display: -webkit-box;
+}
+
 .presents {
   padding: 100px 0 70px;
 }
@@ -337,6 +341,7 @@ body.lock {
 .slider-nav {
   margin-top: 20px;
   max-width: 100px;
+  height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,13 +356,14 @@ body.lock {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 14px;
           flex: 0 0 14px;
-  height: 8px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .slider-nav__next-btn img {
@@ -1177,7 +1183,7 @@ body.lock {
     text-align: center;
   }
 
-  #wrapper {
+  #wrapper.home-page {
     display: block;
   }
 
@@ -1204,6 +1210,23 @@ body.lock {
 
   .presents__work {
     height: 300px;
+  }
+
+  .slider-nav {
+    font-size: 25px;
+    max-width: 250px;
+  }
+
+  .slider-nav__prev-btn,
+  .slider-nav__next-btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30px;
+            flex: 0 0 30px;
+  }
+
+  .slider-nav__pagination .swiper-pagination-bullet {
+    margin: 0 15px !important;
+    width: auto;
   }
 
   .artists__list {
