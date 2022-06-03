@@ -35,36 +35,41 @@ $('.tab-toggle__btn').on('click', function () {
 	$('.tab-page' + '.' + $(this).data("tab")).addClass('active');
 })
 
-lightbox.option({
-	// 	'alwaysShowNavOnTouchDevices': false,
-		'disableScrolling': true,
-		'fadeDuration': 500,
-	// 	'fitImagesInViewport': true,
-		'imageFadeDuration': 500,
-		// 'maxWidth': ,
-		// 'maxHeight': ,
-	// 	'positionFromTop': 50,
-		'resizeDuration': 500,
-		'showImageNumberLabel': true,
-		// 'wrapAround': false,
-})
+if($('#lightbox').length) {
 
-const swiper = new Swiper('.main-slider', {
+	lightbox.option({
+		// 	'alwaysShowNavOnTouchDevices': false,
+			'disableScrolling': true,
+			'fadeDuration': 500,
+		// 	'fitImagesInViewport': true,
+			'imageFadeDuration': 500,
+			// 'maxWidth': ,
+			// 'maxHeight': ,
+		// 	'positionFromTop': 50,
+			'resizeDuration': 500,
+			'showImageNumberLabel': true,
+			// 'wrapAround': false,
+	})
+}
 
-	loop: true,
-	simulateTouch: true,
+if($('.swiper').length) {
 
-	pagination: {
-		el: '.slider-nav__pagination',
-		clickable: true,
-		renderBullet: function (index, className) {
-			return'<span class="' + className + '">' + (index + 1) + '</span>';
-		}
-	},
+	const swiper = new Swiper('.main-slider', {
 
-	navigation: {
-	  nextEl: '.slider-nav__next-btn',
-	  prevEl: '.slider-nav__prev-btn',
-	},
-});
+		loop: true,
+		simulateTouch: true,
 
+		pagination: {
+			el: '.slider-nav__pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				return'<span class="' + className + '">' + (index + 1) + '</span>';
+			}
+		},
+
+		navigation: {
+		nextEl: '.slider-nav__next-btn',
+		prevEl: '.slider-nav__prev-btn',
+		},
+	});
+}
