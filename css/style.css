@@ -1574,6 +1574,38 @@ body.lock {
   .box-video__right {
     text-align: center;
   }
+
+  .lb-nav {
+    top: auto;
+    left: auto;
+    width: 100%;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    height: 50px;
+  }
+
+  .lb-prev,
+  .lb-next {
+    width: 50% !important;
+    background: url(../img/404/02.svg) 40 20 no-repeat center !important;
+    opacity: 1 !important;
+    padding: 0 10px;
+  }
+
+  .lb-prev:hover,
+  .lb-next:hover {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    -webkit-transition: background-color linear 0.5s;
+    -o-transition: background-color linear 0.5s;
+    transition: background-color linear 0.5s;
+  }
+
+  .lb-next {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 
 @media (max-width: 450px) {
