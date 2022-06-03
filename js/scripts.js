@@ -26,53 +26,6 @@ $(document).scroll(function() {
 	}
 })
 
-const swiper = new Swiper('.main-slider', {
-	// Optional parameters
-	loop: true,
- 
-	// If we need pagination
-	pagination: {
-		el: '.slider-nav__pagination',
-		clickable: true,
-		renderBullet: function (index, className) {
-			return'<span class="' + className + '">' + (index + 1) + '</span>';
-		}
-	},
- 
-	// Navigation arrows
-	navigation: {
-	  nextEl: '.slider-nav__next-btn',
-	  prevEl: '.slider-nav__prev-btn',
-	},
- });
-
-// let max_width = 0
-
-// $('.artists__link').each(function() {
-
-// 	let this_width = $(this).width()
-
-// 	if (this_width > max_width) {
-// 		max_width = this_width
-// 	}
-// })
-
-// if ($(window).width() <= 768) {
-
-// 	$('.artists__list').css("max-width", max_width + 20);
-// }
-
-// $(window).on('resize', function() {
-
-// 	if ($(window).width() <= 768) {
-
-// 		$('.artists__list').css("max-width", max_width + 20);
-// 	} else {
-
-// 		$('.artists__list').css("max-width", "none");
-// 	}
-// })
-
 $('.tab-toggle__btn').on('click', function () {
 	
 	$('.tab-toggle__btn').removeClass('active');
@@ -82,27 +35,41 @@ $('.tab-toggle__btn').on('click', function () {
 	$('.tab-page' + '.' + $(this).data("tab")).addClass('active');
 })
 
+// const swiper = new Swiper('.main-slider', {
 
+// 	loop: true,
+// 	simulateTouch: true,
 
-// let tab_class
-// let tab_data
-
-// $('.works__info span:first-child').on('click', function () {
-
-// 	$('.artists-page .tab-toggle__btn').each(function() {
-
-// 		if($(this).hasClass('active')) {
-// 			tab_class = $(this).attr('class')
-// 			tab_data = $(this).data('tab')
+// 	pagination: {
+// 		el: '.slider-nav__pagination',
+// 		clickable: true,
+// 		renderBullet: function (index, className) {
+// 			return'<span class="' + className + '">' + (index + 1) + '</span>';
 // 		}
-// 	})
+// 	},
 
-// 	console.log(tab_class, tab_data);
-// 	sessionStorage.setItem('class', tab_class);
-// })
+// 	navigation: {
+// 	  nextEl: '.slider-nav__next-btn',
+// 	  prevEl: '.slider-nav__prev-btn',
+// 	},
+// });
+
+lightbox.option({
+// 	'alwaysShowNavOnTouchDevices': false,
+	'disableScrolling': true,
+	'fadeDuration': 500,
+// 	'fitImagesInViewport': true,
+	'imageFadeDuration': 500,
+	// 'maxWidth': ,
+	// 'maxHeight': ,
+// 	'positionFromTop': 50,
+	'resizeDuration': 500,
+	'showImageNumberLabel': true,
+	// 'wrapAround': false,
+})
 
 
-// $('.current-item').on('click', function () {
-	
-// 	console.log(sessionStorage.getItem('class'));
-// })
+console.log($('.lb-close'));
+$('*').on('click', function () {
+	console.log('click');
+})

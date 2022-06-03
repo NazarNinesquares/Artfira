@@ -160,6 +160,9 @@ body.lock {
 }
 
 .secondary-nav .tab-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: end;
   padding-left: 10px;
 }
@@ -340,7 +343,7 @@ body.lock {
 
 .slider-nav {
   margin-top: 20px;
-  max-width: 100px;
+  max-width: 150px;
   height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -381,6 +384,7 @@ body.lock {
   bottom: 0 !important;
   text-align: center;
   font-family: Arial;
+  margin: 0 10px;
 }
 
 .slider-nav__pagination .swiper-pagination-bullet {
@@ -388,6 +392,8 @@ body.lock {
   opacity: 1;
   position: relative;
   height: 100%;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
 .slider-nav__pagination .swiper-pagination-bullet::before {
@@ -660,7 +666,7 @@ body.lock {
 }
 
 .works__item-box:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 75px;
 }
 
 .works__img-box {
@@ -699,6 +705,29 @@ body.lock {
 
 .works__info span:first-child {
   font-weight: 700;
+}
+
+.texts {
+  display: none;
+  padding-bottom: 50px;
+}
+
+.texts.active {
+  display: block;
+}
+
+.texts__text-box {
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 2.25;
+}
+
+.texts__text-box p span {
+  display: block;
+}
+
+.texts__text-box p:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .select-work {
@@ -843,6 +872,95 @@ body.lock {
   line-height: 1.71;
 }
 
+.lightbox {
+  top: 50%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.lightbox .lb-image {
+  border: none;
+  border-radius: 0;
+}
+
+.lb-dataContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  height: auto;
+  padding: 0;
+  z-index: 10;
+}
+
+.lb-data {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 5px;
+}
+
+.lb-details {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  line-height: 1.4 !important;
+}
+
+.lb-number {
+  padding: 0 !important;
+  color: #fff !important;
+}
+
+.lb-close {
+  width: 14px !important;
+  height: 14px !important;
+  float: none !important;
+  background: url(../img/lightbox/close.svg) no-repeat center !important;
+}
+
+.lb-nav {
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 80px);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.lb-prev,
+.lb-next {
+  width: 40px !important;
+  background: url(../img/404/02.svg) 20 20 no-repeat center !important;
+  opacity: 1 !important;
+  padding: 0 10px;
+}
+
+.lb-prev:hover,
+.lb-next:hover {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  -webkit-transition: background-color linear 0.5s;
+  -o-transition: background-color linear 0.5s;
+  transition: background-color linear 0.5s;
+}
+
+.lb-next {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 @media (max-width: 1440px) {
   #wrapper {
     max-width: 1125px;
@@ -862,10 +980,24 @@ body.lock {
 }
 
 @media (max-width: 1150px) {
+  .secondary-nav {
+    display: block;
+  }
+
+  .secondary-nav .tab-toggle {
+    text-align: start;
+    padding: 0;
+  }
+
   .secondary-nav .tab-toggle__btn,
   .secondary-nav .tab-link {
     letter-spacing: 1px;
     margin: 0 11px;
+  }
+
+  .secondary-nav .tab-toggle__btn:first-child,
+  .secondary-nav .tab-link:first-child {
+    margin-left: 0;
   }
 
   .biography {
@@ -992,6 +1124,13 @@ body.lock {
 @media (max-width: 768px) {
   .navigation {
     height: auto;
+  }
+
+  #wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .secondary-nav {
@@ -1341,15 +1480,21 @@ body.lock {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
     padding: 0;
     margin-top: 10px;
+  }
+
+  .secondary-nav .tab-toggle__row {
+    width: 50%;
+  }
+
+  .secondary-nav .tab-toggle__row:nth-child(2) {
+    text-align: end;
   }
 
   .secondary-nav .tab-toggle__btn,
