@@ -1092,7 +1092,6 @@ body.lock {
 }
 
 .shop-item__ibox {
-  display: block;
   height: 278px;
   margin-bottom: 10px;
 }
@@ -1688,6 +1687,14 @@ body.lock {
   .secondary-nav .tab-toggle__btn:not(:first-child),
   .secondary-nav .tab-link:not(:first-child) {
     margin-bottom: 8px;
+  }
+
+  .pagination__list {
+    font-size: 20px;
+  }
+
+  .pagination__item {
+    margin: 0 10px 5px;
   }
 
   .presents {
