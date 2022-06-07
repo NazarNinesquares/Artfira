@@ -855,13 +855,6 @@ body.lock {
   margin-top: 25px;
 }
 
-.lightbox {
-  top: 50%;
-  -webkit-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-          transform: translateY(50%);
-}
-
 .lightbox .lb-image {
   border: none;
   border-radius: 0;

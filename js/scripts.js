@@ -45,7 +45,7 @@ if($('#lightbox').length) {
 			'imageFadeDuration': 500,
 			// 'maxWidth': ,
 			// 'maxHeight': ,
-		// 	'positionFromTop': 50,
+			'positionFromTop': 50,
 			'resizeDuration': 500,
 			'showImageNumberLabel': true,
 			// 'wrapAround': false,
