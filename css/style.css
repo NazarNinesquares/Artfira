@@ -68,6 +68,10 @@ body.lock {
   overflow: hidden;
 }
 
+html {
+  overflow-y: overlay;
+}
+
 ._cont {
   padding: 0 15px;
 }
@@ -712,8 +716,6 @@ body.lock {
   font-family: Arial;
   font-size: 16px;
   line-height: 2.28;
-  text-align: center;
-  line-height: 2.21;
   margin-bottom: 20px;
 }
 
