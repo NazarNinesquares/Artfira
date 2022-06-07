@@ -203,41 +203,31 @@ html {
   background: #003F8E;
 }
 
-.pagination {
+.woocommerce-pagination {
+  text-align: center;
+}
+
+.woocommerce-pagination .page-numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 16px;
+  font-family: Arial;
+  line-height: 1.16;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.pagination__prew-btn.lock,
-.pagination__next-btn.lock {
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.pagination__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  font-size: 12px;
-  font-family: Arial;
-  line-height: 1.16;
-  margin: 0 20px;
-  max-width: 175px;
-}
-
-.pagination__item {
+.woocommerce-pagination .page-numbers .page-numbers {
   position: relative;
-  margin: 0 5px 5px;
-  cursor: pointer;
+  margin: 0 5px;
 }
 
-.pagination__item::before {
+.woocommerce-pagination .page-numbers .page-numbers::before {
   content: "";
   display: none;
   position: absolute;
@@ -248,14 +238,19 @@ html {
   background: #000;
 }
 
-.pagination__item.active::before {
+.woocommerce-pagination .page-numbers .page-numbers.current::before {
   display: block;
 }
 
-.pagination__next-btn {
+.woocommerce-pagination .page-numbers.prev {
+  margin-right: 15px;
+}
+
+.woocommerce-pagination .page-numbers.next {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+  margin-left: 15px;
 }
 
 .header {
@@ -1058,16 +1053,12 @@ html {
 }
 
 .shop-page {
-  display: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 -63px;
-}
-
-.shop-page.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -63px;
 }
 
 .shop-item {
