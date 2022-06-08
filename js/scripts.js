@@ -73,3 +73,17 @@ if($('.swiper').length) {
 		},
 	});
 }
+
+$('.shop-item__btn').on('click', function () {
+	
+	$('.contact-form').addClass('active');
+	$('.popap-owerlay').addClass('active');
+	// $('body').addClass('lock');
+})
+
+$('.contact-form__close').on('click', function () {
+	
+	$('.contact-form').removeClass('active');
+	$('.popap-owerlay').removeClass('active');
+	// $('body').removeClass('lock');
+})
