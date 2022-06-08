@@ -1063,6 +1063,7 @@ html {
           transform: translate(-50%, -50%);
   background: #fff;
   padding: 0 70px;
+  margin-bottom: 15px;
   -webkit-transition: all linear 0.2s;
   -o-transition: all linear 0.2s;
   transition: all linear 0.2s;
@@ -1318,6 +1319,14 @@ html {
 
   .contact-form {
     width: 580px;
+    top: 30px;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+
+  .contact-form.active {
+    top: 15px;
   }
 
   .shop-item {
@@ -2037,15 +2046,6 @@ html {
 @media (max-width: 500px) {
   .contact-form {
     padding: 0 20px;
-    top: 30px;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-
-  .contact-form.active {
-    top: 15px;
   }
 
   .contact-form__header {
