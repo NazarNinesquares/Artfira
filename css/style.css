@@ -1394,8 +1394,11 @@ html {
 }
 
 @media (max-width: 1100px) {
-  .shop-item-page.lock {
+  .shop-item-page {
     height: 100%;
+  }
+
+  .shop-item-page.lock {
     overflow: hidden;
   }
 }
