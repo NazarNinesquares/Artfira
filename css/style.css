@@ -852,6 +852,15 @@ html {
   margin-top: 25px;
 }
 
+.lightboxOverlay {
+  height: 100% !important;
+  width: 100vw !important;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .lightbox .lb-image {
   border: none;
   border-radius: 0;
