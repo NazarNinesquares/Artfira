@@ -27,7 +27,7 @@ $(document).scroll(function() {
 })
 
 $('.tab-toggle__btn').on('click', function () {
-	
+
 	$('.tab-toggle__btn').removeClass('active');
 	$(this).addClass('active');
 
@@ -87,3 +87,4 @@ $('.contact-form__close').on('click', function () {
 	$('.popap-owerlay').removeClass('active');
 	$('body').removeClass('lock');
 })
+
