@@ -68,6 +68,7 @@ h6 {
 
 html {
   overflow-y: overlay;
+  overflow-x: hidden;
 }
 
 ._cont {
@@ -127,7 +128,7 @@ html {
 }
 
 ._heading {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: bold;
   font-size: 20px;
   line-height: 184%;
@@ -143,7 +144,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 500;
   line-height: 2.28;
   padding: 100px 0 35px;
@@ -189,7 +190,7 @@ html {
   background: #0156BF;
   color: #fff;
   border-radius: 5px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.78;
@@ -282,7 +283,7 @@ html {
 }
 
 .main-navigation {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 226.9%;
@@ -291,6 +292,10 @@ html {
 
 .main-navigation .page_item {
   text-transform: uppercase;
+}
+
+.main-navigation .page_item.current a::after {
+  width: 100%;
 }
 
 .main-navigation a {
@@ -322,6 +327,7 @@ html {
   font-family: Arial;
   font-weight: bold;
   line-height: 1.62;
+  font-size: 16px;
 }
 
 .footer__contact a {
@@ -361,6 +367,7 @@ html {
   font-family: Arial;
   font-weight: bold;
   line-height: 1.62;
+  font-size: 16px;
 }
 
 .mb-footer__link {
@@ -508,7 +515,7 @@ html {
 }
 
 .not-found__title {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 600;
   font-size: 128px;
   margin-bottom: 20px;
@@ -523,7 +530,7 @@ html {
 }
 
 .not-found__btn {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   position: relative;
@@ -699,7 +706,7 @@ html {
 
 .content-biography__title {
   display: block;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 2.25;
@@ -763,7 +770,7 @@ html {
 
 .works__title {
   display: block;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.75;
@@ -1098,7 +1105,7 @@ html {
 }
 
 .contact-form__title {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.77;
@@ -1119,7 +1126,7 @@ html {
 
 .contact-form__inbox input,
 .contact-form__inbox textarea {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.77;
@@ -1140,7 +1147,7 @@ html {
 
 .contact-form__text,
 .contact-form__thanks {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.56;
@@ -1187,7 +1194,7 @@ html {
 }
 
 .box-video__title {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.75;
@@ -1255,7 +1262,7 @@ html {
   display: inline-block;
   position: relative;
   margin-bottom: 10px;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
 }
 
 .shop-item__price {
@@ -1325,7 +1332,7 @@ html {
 
 .item-blog__title {
   display: block;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.75;
@@ -1757,7 +1764,7 @@ html {
     padding: 100px 15px 200px;
   }
 
-  .main-navigation a::after {
+  .main-navigation .page_item:not(.current) a::after {
     display: none;
   }
 
@@ -2049,7 +2056,7 @@ html {
 
   .works__title {
     display: block;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: 600;
     font-size: 24px;
     line-height: 1.75;
