@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" href="img/home/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/home/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="service/swiper.min.css">
-	<link rel="stylesheet" href="service/lightbox.min.css">
+	<link rel="stylesheet" href="service/css/lightgallery.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>ArtFira Gallery | Item</title>
 </head>
@@ -81,27 +81,19 @@
 				</div>
 			</div>
 			<div class="shop-item-page">
-				<div class="select-work__left">
-					<div class="select-work__img-box">
-						<a href="img/shop-item/01.png" data-lightbox="image-show" data-title="Optional caption.">
-							<img class='select-work__img' src='img/shop-item/01.png' alt=''>
-						</a>
-					</div>
-					<div class="select-work__img-box">
-						<a href="img/shop-item/02.png" data-lightbox="image-show">
-							<img class='select-work__img' src='img/shop-item/02.png' alt=''>
-						</a>
-					</div>
-					<div class="select-work__img-box">
-						<a href="img/shop-item/03.png" data-lightbox="image-show">
-							<img class='select-work__img' src='img/shop-item/03.png' alt=''>
-						</a>
-					</div>
-					<div class="select-work__img-box">
-						<a href="img/shop-item/01.png" data-lightbox="image-show" data-title="Optional caption.">
-							<img class='select-work__img' src='img/shop-item/01.png' alt=''>
-						</a>
-					</div>
+				<div class="select-work__left _lg">
+					<a class="select-work__img-box" href="img/shop-item/01.png">
+						<img class='select-work__img' src='img/shop-item/01.png' alt=''>
+					</a>
+					<a class="select-work__img-box" href="img/shop-item/02.png">
+						<img class='select-work__img' src='img/shop-item/02.png' alt=''>
+					</a>
+					<a class="select-work__img-box" href="img/shop-item/03.png">
+						<img class='select-work__img' src='img/shop-item/03.png' alt=''>
+					</a>
+					<a class="select-work__img-box" href="img/shop-item/01.png">
+						<img class='select-work__img' src='img/shop-item/01.png' alt=''>
+					</a>
 				</div>
 				<div class="select-work__right">
 					<div class="select-work__text-box">
@@ -116,7 +108,7 @@
 								<span class="shop-item__price">125.00 USD</span>
 								<span class="shop-item__shipping">+shipping</span>
 							</div>
-							<button class="shop-item__btn main-btn">Buy it now</button>
+							<button class="shop__btn main-btn">Buy it now</button>
 						</div>
 					</div>
 				</div>
@@ -124,30 +116,33 @@
 		</div>
 		
 		<span class="popap-owerlay"></span>
-		<div class="contact-form">
-			<form>
-				<div class="contact-form__header">
-					<span class="contact-form__title">Contact Form</span>
-					<img class='contact-form__close' src='img/shop-item/close.svg' alt=''>
-				</div>
-				<div class="contact-form__inbox">
-					<input type="text" name="first-and-last-name" placeholder="First and last name">
-				</div>
-				<div class="contact-form__inbox">
-					<input type="email" name="email" placeholder="Email">
-				</div>
-				<div class="contact-form__inbox">
-					<textarea name="comment" placeholder="Comment"></textarea>
-				</div>
-				<p class="contact-form__text">
-					Please send us an email specifying the item you want to buy and we will email you the link for secure credit card payment.
-				</p>
-				<span class="contact-form__thanks">Thank you</span>
-				<div class="contact-form__inbox">
-					<input class="main-btn" type="submit" value="SEND">
-				</div>
-			</form>
+<div class="contact-form">
+	<form>
+		<div class="contact-form__header">
+			<span class="contact-form__title">Contact Form</span>
+			<img class='contact-form__close' src='img/shop-item/close.svg' alt=''>
 		</div>
+		<div class="contact-form__inbox item-name-box">
+			<input class="item-name" type="text" name="item-name">
+		</div>
+		<div class="contact-form__inbox">
+			<input type="text" name="first-and-last-name" placeholder="First and last name">
+		</div>
+		<div class="contact-form__inbox">
+			<input type="email" name="email" placeholder="Email">
+		</div>
+		<div class="contact-form__inbox">
+			<textarea name="comment" placeholder="Comment"></textarea>
+		</div>
+		<p class="contact-form__text">
+			Please send us an email specifying the item you want to buy and we will email you the link for secure credit card payment.
+		</p>
+		<span class="contact-form__thanks">Thank you</span>
+		<div class="contact-form__inbox">
+			<input class="main-btn" type="submit" value="SEND">
+		</div>
+	</form>
+</div>
 
 	</main>
 
@@ -166,7 +161,7 @@
 </footer>
 
 	<script src="service/jquery.js"></script>
-	<script src="service/lightbox.min.js"></script>
+	<script src="service/js/lightgallery.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 </body>
 

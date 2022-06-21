@@ -8,12 +8,12 @@
 	<link rel="shortcut icon" href="img/home/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/home/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="service/swiper.min.css">
-	<link rel="stylesheet" href="service/lightbox.min.css">
+	<link rel="stylesheet" href="service/css/lightgallery.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>ArtFira Gallery | Shop</title>
 </head>
 
-<body id="wrapper" class="artists-page">
+<body id="wrapper" class="shop-wrapper">
 
 	<div class="navigation">
 		<header class="header">
@@ -80,7 +80,7 @@
 				<div class="shop-page">
 					<div class="shop-item">
 						<div class="shop-item__ibox">
-							<a href="img/shop/01.png" data-lightbox="item-1.1" data-title="Optional caption.">
+							<a href="shop-item.html">
 								<img class='shop-item__img' src='img/shop/01.png' alt=''>
 							</a>
 						</div>
@@ -91,11 +91,11 @@
 							<span class="shop-item__price">125.00 USD</span>
 							<span class="shop-item__shipping">+shipping</span>
 						</div>
-						<a class="shop-item__btn main-btn" href="shop-item.html">Buy it now</a>
+						<button class="shop-item__btn main-btn">Buy it now</button>
 					</div>
 					<div class="shop-item">
 						<div class="shop-item__ibox">
-							<a href="img/shop/02.png" data-lightbox="item-1.2" data-title="Optional caption.">
+							<a href="shop-item.html">
 								<img class='shop-item__img' src='img/shop/02.png' alt=''>
 							</a>
 						</div>
@@ -106,11 +106,11 @@
 							<span class="shop-item__price">25.00 USD</span>
 							<span class="shop-item__shipping">+shipping</span>
 						</div>
-						<a class="shop-item__btn main-btn" href="shop-item.html">Buy it now</a>
+						<button class="shop-item__btn main-btn">Buy it now</button>
 					</div>
 					<div class="shop-item">
 						<div class="shop-item__ibox">
-							<a href="img/shop/03.png" data-lightbox="item-1.3" data-title="Optional caption.">
+							<a href="shop-item.html">
 								<img class='shop-item__img' src='img/shop/03.png' alt=''>
 							</a>
 						</div>
@@ -121,11 +121,11 @@
 							<span class="shop-item__price">50.00 USD</span>
 							<span class="shop-item__shipping">+shipping</span>
 						</div>
-						<a class="shop-item__btn main-btn" href="shop-item.html">Buy it now</a>
+						<button class="shop-item__btn main-btn">Buy it now</button>
 					</div>
 					<div class="shop-item">
 						<div class="shop-item__ibox">
-							<a href="img/shop/04.png" data-lightbox="item-1.4" data-title="Optional caption.">
+							<a href="shop-item.html">
 								<img class='shop-item__img' src='img/shop/04.png' alt=''>
 							</a>
 						</div>
@@ -136,7 +136,7 @@
 							<span class="shop-item__price">50.00 USD</span>
 							<span class="shop-item__shipping">+shipping</span>
 						</div>
-						<a class="shop-item__btn main-btn" href="shop-item.html">Buy it now</a>
+						<button class="shop-item__btn main-btn">Buy it now</button>
 					</div>
 				</div>
 				<nav class="woocommerce-pagination">
@@ -149,6 +149,36 @@
 				</nav>
 			</div>
 		</div>
+
+		<span class="popap-owerlay"></span>
+<div class="contact-form">
+	<form>
+		<div class="contact-form__header">
+			<span class="contact-form__title">Contact Form</span>
+			<img class='contact-form__close' src='img/shop-item/close.svg' alt=''>
+		</div>
+		<div class="contact-form__inbox item-name-box">
+			<input class="item-name" type="text" name="item-name">
+		</div>
+		<div class="contact-form__inbox">
+			<input type="text" name="first-and-last-name" placeholder="First and last name">
+		</div>
+		<div class="contact-form__inbox">
+			<input type="email" name="email" placeholder="Email">
+		</div>
+		<div class="contact-form__inbox">
+			<textarea name="comment" placeholder="Comment"></textarea>
+		</div>
+		<p class="contact-form__text">
+			Please send us an email specifying the item you want to buy and we will email you the link for secure credit card payment.
+		</p>
+		<span class="contact-form__thanks">Thank you</span>
+		<div class="contact-form__inbox">
+			<input class="main-btn" type="submit" value="SEND">
+		</div>
+	</form>
+</div>
+
 	</main>
 
 	<footer class="mb-footer">
@@ -166,7 +196,6 @@
 </footer>
 
 	<script src="service/jquery.js"></script>
-	<script src="service/lightbox.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 </body>
 
