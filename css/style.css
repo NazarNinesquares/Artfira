@@ -78,7 +78,9 @@ html {
 }
 
 #wrapper {
-  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
   color: #151414;
   max-width: 1320px;
   margin: 0 auto;
@@ -234,8 +236,6 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 16px;
-  font-family: Arial;
   line-height: 1.16;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -311,9 +311,6 @@ html {
   font-size: 24px;
   line-height: 226.9%;
   letter-spacing: 1.4px;
-}
-
-.main-navigation .page_item {
   text-transform: uppercase;
 }
 
@@ -347,7 +344,6 @@ html {
 }
 
 .footer__contact {
-  font-family: Arial;
   font-weight: bold;
   line-height: 1.62;
   font-size: 16px;
@@ -387,7 +383,6 @@ html {
 }
 
 .mb-footer__contact {
-  font-family: Arial;
   font-weight: bold;
   line-height: 1.62;
   font-size: 16px;
@@ -411,8 +406,6 @@ html {
 }
 
 .presents__info {
-  font-family: Arial;
-  font-size: 16px;
   line-height: 1.87;
   margin-bottom: 30px;
 }
@@ -487,7 +480,6 @@ html {
   display: flex;
   bottom: 0 !important;
   text-align: center;
-  font-family: Arial;
   margin: 0 10px;
 }
 
@@ -545,7 +537,6 @@ html {
 }
 
 .not-found__text {
-  font-family: Arial;
   font-size: 20px;
   text-align: center;
   margin-bottom: 70px;
@@ -646,7 +637,6 @@ html {
 }
 
 .preview__text {
-  font-family: Arial;
   font-size: 22px;
   font-weight: 400;
   line-height: 1, 86;
@@ -664,7 +654,6 @@ html {
 }
 
 .artists {
-  font-family: Arial;
   font-size: 24px;
   line-height: 1.3;
 }
@@ -738,16 +727,12 @@ html {
 
 .content-biography__info {
   display: block;
-  font-family: Arial;
-  font-size: 16px;
   line-height: 2.28;
   margin-bottom: 20px;
 }
 
 .content-biography p {
   max-width: 430px;
-  font-family: Arial;
-  font-size: 16px;
   line-height: 2.28;
 }
 
@@ -800,12 +785,6 @@ html {
   margin-bottom: 5px;
 }
 
-.works__info {
-  font-family: Arial;
-  line-height: 1.78;
-  font-size: 16px;
-}
-
 .works__info span {
   display: block;
 }
@@ -824,8 +803,6 @@ html {
 }
 
 .texts__text-box {
-  font-family: Arial;
-  font-size: 16px;
   line-height: 2.25;
 }
 
@@ -872,12 +849,6 @@ html {
   margin-bottom: 10px;
 }
 
-.select-work__text {
-  font-family: Arial;
-  font-size: 16px;
-  line-height: 1.78;
-}
-
 .work__text {
   line-height: 1.71;
   margin-top: 25px;
@@ -903,9 +874,6 @@ html {
 
 .exhibitions__text-box *:not(.works__title) {
   margin: 0;
-  font-family: Arial;
-  line-height: 1.78;
-  font-size: 16px;
 }
 
 .exhibitions__text-box > *:not(:last-child) {
@@ -945,12 +913,6 @@ html {
   margin-bottom: 50px;
 }
 
-.exhibitions-item__text-box {
-  font-family: Arial;
-  line-height: 1.71;
-  font-size: 16px;
-}
-
 .exhibitions-item__text-box p {
   margin-bottom: 30px;
 }
@@ -958,7 +920,6 @@ html {
 .members-exhibitions-item {
   font-weight: 700;
   line-height: 1.71;
-  font-family: Arial;
 }
 
 .members-exhibitions-item__title {
@@ -1139,12 +1100,6 @@ html {
   margin-bottom: 5px;
 }
 
-.box-video__subtitle {
-  line-height: 1.71;
-  font-family: Arial;
-  font-size: 16px;
-}
-
 .shop {
   padding-bottom: 50px;
 }
@@ -1191,7 +1146,6 @@ html {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  font-family: Arial;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.77;
@@ -1276,12 +1230,6 @@ html {
   margin-bottom: 13px !important;
 }
 
-.blog-list-item__date {
-  font-family: Arial;
-  font-size: 16px;
-  line-height: 1.78;
-}
-
 .blog-list-item__title {
   display: block;
   font-family: Raleway, sans-serif;
@@ -1291,9 +1239,6 @@ html {
 }
 
 .blog-list-item__text {
-  font-family: Arial;
-  font-size: 16px;
-  line-height: 1.75;
   margin-bottom: 50px;
 }
 
@@ -1348,12 +1293,6 @@ html {
   margin-bottom: 13px !important;
 }
 
-.item-blog__date {
-  font-family: Arial;
-  font-size: 16px;
-  line-height: 1.78;
-}
-
 .item-blog__title {
   display: block;
   font-family: Raleway, sans-serif;
@@ -1363,9 +1302,6 @@ html {
 }
 
 .item-blog__text {
-  font-family: Arial;
-  font-size: 16px;
-  line-height: 1.75;
   margin-bottom: 50px;
 }
 
