@@ -131,6 +131,18 @@ html {
   padding-left: 0;
 }
 
+h2 {
+  font-family: Raleway, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .lg-actions .lg-next,
 .lg-actions .lg-prev {
   font-size: 15px;
@@ -1228,14 +1240,6 @@ html {
 
 .blog-list-item__heading {
   margin-bottom: 13px !important;
-}
-
-.blog-list-item__title {
-  display: block;
-  font-family: Raleway, sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.75;
 }
 
 .blog-list-item__text {
