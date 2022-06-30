@@ -1850,15 +1850,15 @@ h3 {
   }
 
   .slider-nav {
-    font-size: 25px;
+    font-size: 18px;
     max-width: 250px;
   }
 
   .slider-nav__prev-btn,
   .slider-nav__next-btn {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 30px;
-            flex: 0 0 30px;
+        -ms-flex: 0 0 25px;
+            flex: 0 0 25px;
   }
 
   .slider-nav__pagination .swiper-pagination-bullet {
