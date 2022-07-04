@@ -84,9 +84,9 @@ html {
   color: #151414;
   max-width: 1320px;
   margin: 0 auto;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: -webkit-box;
   min-width: 0;
   position: relative;
 }
@@ -141,6 +141,12 @@ h3 {
   font-family: Raleway, sans-serif;
   font-size: 20px;
   font-weight: 600;
+}
+
+body.lock,
+body.lg-on {
+  height: 100%;
+  overflow: hidden;
 }
 
 .lg-actions .lg-next,
@@ -653,10 +659,6 @@ h3 {
   font-weight: 400;
   line-height: 1, 86;
   text-align: center;
-}
-
-#wrapper.artists-page {
-  min-height: 100%;
 }
 
 .artists-main {
@@ -1502,11 +1504,6 @@ h3 {
 
   .shop-item-page.lock {
     overflow: hidden;
-  }
-
-  .shop-wrapper.lock {
-    overflow: hidden;
-    height: 100%;
   }
 }
 
