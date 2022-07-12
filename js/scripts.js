@@ -35,41 +35,50 @@ $('.tab-toggle__btn').on('click', function () {
 	$('.tab-page' + '.' + $(this).data("tab")).addClass('active');
 })
 
-if($('#lightbox').length) {
-
-	lightbox.option({
-		// 	'alwaysShowNavOnTouchDevices': false,
-			'disableScrolling': true,
-			'fadeDuration': 500,
-		// 	'fitImagesInViewport': true,
-			'imageFadeDuration': 500,
-			// 'maxWidth': ,
-			// 'maxHeight': ,
-			'positionFromTop': 50,
-			'resizeDuration': 500,
-			'showImageNumberLabel': true,
-			// 'wrapAround': false,
-	})
-}
-
 if($('.swiper').length) {
 
 	new Swiper('.main-slider', {
 
 		loop: true,
-		simulateTouch: true,
+		simulateTouch: false,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		}
 
-		pagination: {
-			el: '.slider-nav__pagination',
-			clickable: true,
-			renderBullet: function (index, className) {
-				return'<span class="' + className + '">' + (index + 1) + '</span>';
-			}
-		},
+		// pagination: {
+		// 	el: '.slider-nav__pagination',
+		// 	clickable: true,
+		// 	renderBullet: function (index, className) {
+		// 		return'<span class="' + className + '">' + (index + 1) + '</span>';
+		// 	}
+		// },
 
+		// navigation: {
+		// nextEl: '.slider-nav__next-btn',
+		// prevEl: '.slider-nav__prev-btn',
+		// },
+	});
+
+	new Swiper('.shop-slider', {
+
+		loop: true,
+	});
+
+	new Swiper('.work-slider', {
+
+		loop: true,
 		navigation: {
-		nextEl: '.slider-nav__next-btn',
-		prevEl: '.slider-nav__prev-btn',
+			nextEl: '.work-slider__next-btn',
+			prevEl: '.work-slider__prev-btn',
+		},
+		thumbs: {
+			
+			swiper: {
+				el: '.work-thumbnail',
+				// slidesPerView: 3,
+				// centeredSlides: true,
+			}
 		},
 	});
 }
@@ -133,8 +142,29 @@ $('.shop__btn').on('click', function () {
 	$('.item-name').val($('.works__title').text().trim());
 })
 
+if($('._lg').length) {
+	$('._lg').lightGallery({});
+}
+
+if($('.tab-toggle').length) {
+	let tabName = sessionStorage.getItem('tab-name');
+
+	if(tabName !== null) {
+		console.log(tabName);
+
+		$('.tab-toggle__btn').removeClass('active');
+		// $('.tab-toggle__btn[data-tab="'+ tabName +'"]').addClass('active');
+		$('.tab-toggle__btn[data-tab="'+ tabName +'"]').trigger('click');
+	}
+	
+	$('.tab-toggle__btn').on('click', function () {
+		
+		// sessionStorage.removeItem('tab-name')
+		sessionStorage.setItem('tab-name', $(this).attr('data-tab'))
+		// let getTabName = 
+		// console.log(getTabName);
+	})
 
 
 
-
-$('._lg').lightGallery({});
+}
