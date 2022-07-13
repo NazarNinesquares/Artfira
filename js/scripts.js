@@ -65,22 +65,37 @@ if($('.swiper').length) {
 		loop: true,
 	});
 
-	new Swiper('.work-slider', {
+	let main = new Swiper('.work-slider', {
 
-		loop: true,
+		// loop: true,
 		navigation: {
 			nextEl: '.work-slider__next-btn',
 			prevEl: '.work-slider__prev-btn',
 		},
-		thumbs: {
+
+		// thumbs: {
 			
-			swiper: {
-				el: '.work-thumbnail',
-				// slidesPerView: 3,
-				// centeredSlides: true,
-			}
-		},
+		// 	swiper: {
+		// 		loop: true,
+		// 		el: '.work-thumbnail',
+		// 		simulateTouch: false,
+		// 		touchRatio: 0,
+		// 		// centeredSlide: true,
+		// 		// slidesPerView: 4,
+		// 	}
+		// },
 	});
+
+	let thumbs = new Swiper('.work-thumbnail', {
+
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		simulateTouch: false,
+		touchRatio: 0,
+	});
+
+	main.controller.control = thumbs
+	thumbs.controller.control = main
 }
 
 $('.shop-item__btn, .shop__btn').on('click', function () {
@@ -147,24 +162,16 @@ if($('._lg').length) {
 }
 
 if($('.tab-toggle').length) {
-	let tabName = sessionStorage.getItem('tab-name');
+	let master_name = location.pathname.split('/artists/')[1].split('/')[0]
+	let current_tab = sessionStorage.getItem(master_name);
 
-	if(tabName !== null) {
-		console.log(tabName);
-
-		$('.tab-toggle__btn').removeClass('active');
-		// $('.tab-toggle__btn[data-tab="'+ tabName +'"]').addClass('active');
-		$('.tab-toggle__btn[data-tab="'+ tabName +'"]').trigger('click');
-	}
-	
 	$('.tab-toggle__btn').on('click', function () {
-		
-		// sessionStorage.removeItem('tab-name')
-		sessionStorage.setItem('tab-name', $(this).attr('data-tab'))
-		// let getTabName = 
-		// console.log(getTabName);
+		 sessionStorage.setItem(master_name, $(this).attr('data-tab'))
 	})
 
+	if(current_tab !== null) {
 
-
+		 $('.tab-toggle__btn').removeClass('active');
+		 $('.tab-toggle__btn[data-tab="'+ current_tab +'"]').trigger('click');
+	}
 }
